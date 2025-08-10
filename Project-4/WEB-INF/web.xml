@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Project-4</display-name>
+	<welcome-file-list>
+		<welcome-file>authenticate.html</welcome-file>
+		<welcome-file>errorpage.html</welcome-file>
+	</welcome-file-list>
+	
+	<welcome-file-list>
+		<welcome-file>clientHome.html</welcome-file>
+	</welcome-file-list>
+	
+	<welcome-file-list>
+		<welcome-file>rootHome.html</welcome-file>
+	</welcome-file-list>
+	
+	<welcome-file-list>
+		<welcome-file>accountantHome.html</welcome-file>
+	</welcome-file-list>
+	
+	<welcome-file-list>
+		<welcome-file>dataEntryHome.html</welcome-file>
+	</welcome-file-list>
+		
+	<!-- Authentication-->
+	<servlet>
+		<servlet-name>Auth</servlet-name>
+  		<servlet-class>authenticationServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>Auth</servlet-name>
+	    <url-pattern>/auth</url-pattern>
+	</servlet-mapping>
+	
+	<!-- rootHome-->
+	<servlet>
+		<servlet-name>RootUser</servlet-name>
+  		<servlet-class>rootUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>RootUser</servlet-name>
+	    <url-pattern>/rootUser</url-pattern>
+	</servlet-mapping>
+	
+	<!--clientHome-->
+	<servlet>
+		<servlet-name>ClientUser</servlet-name>
+  		<servlet-class>clientUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>ClientUser</servlet-name>
+	    <url-pattern>/clientUser</url-pattern>
+	</servlet-mapping>
+	
+	<!--accountantHome-->
+	<servlet>
+		<servlet-name>AccountantUser</servlet-name>
+  		<servlet-class>accountantUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>AccountantUser</servlet-name>
+	    <url-pattern>/accountantUser</url-pattern>
+	</servlet-mapping>
+	
+	<!--dataEntryHome-->
+	<servlet>
+		<servlet-name>DataEntrySuppliersUser</servlet-name>
+  		<servlet-class>suppliersInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DataEntrySuppliersUser</servlet-name>
+	    <url-pattern>/suppliersInsert</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DataEntryPartsUser</servlet-name>
+  		<servlet-class>partsInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DataEntryPartsUser</servlet-name>
+	    <url-pattern>/partsInsert</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DataEntryJobsUser</servlet-name>
+  		<servlet-class>jobsInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DataEntryJobsUser</servlet-name>
+	    <url-pattern>/jobsInsert</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DataEntryShipmentsUser</servlet-name>
+  		<servlet-class>shipmentsInsertServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DataEntryShipmentsUser</servlet-name>
+	    <url-pattern>/shipmentsInsert</url-pattern>
+	</servlet-mapping>
+</web-app>
